@@ -25,4 +25,6 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run check-in
+        env:
+          COOKIE: ${{ secrets.HIFINI_COOKIE }}
         run: node checkin.js
